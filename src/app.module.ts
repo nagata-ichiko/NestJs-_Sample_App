@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PostsModule } from './posts/posts.module';
 import { LoggermiddlewareMiddleware } from './common/middleware/loggermiddleware/loggermiddleware.middleware';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [PostsModule],
+  imports: [PostsModule, PrismaModule],
   controllers: [AppController],
   providers: [AppService],
 })
