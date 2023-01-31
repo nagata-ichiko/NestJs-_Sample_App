@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { PostsModule } from './posts/posts.module';
 import { LoggermiddlewareMiddleware } from './common/middleware/loggermiddleware/loggermiddleware.middleware';
 import { PrismaModule } from './prisma/prisma.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [PostsModule, PrismaModule],
+  imports: [PostsModule, PrismaModule, UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })
